@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=80.9.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twitter-oauth-pkce"
+version = "0.1.0"
+description = "Twitter OAuth 2.0 + PKCE authentication flow"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "tweepy>=4.15.0",
+    "cachetools>=7.0.0",
+    "requests>=2.32.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.0",
+    "pytest-mock>=3.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
