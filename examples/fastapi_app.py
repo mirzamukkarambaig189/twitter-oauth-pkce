@@ -106,8 +106,8 @@ app.add_middleware(
     SessionMiddleware,
     secret_key=SESSION_SECRET,
     session_cookie="x_oauth_session",
-    max_age=3600,       # 1 hour — matches X access token lifetime
-    https_only=False,   # set True in production (requires HTTPS)
+    max_age=3600,  # 1 hour — matches X access token lifetime
+    https_only=False,  # set True in production (requires HTTPS)
     same_site="lax",
 )
 

@@ -1,4 +1,4 @@
-name: Pre-commit checks
+name: Lint
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  lint-format-typecheck-test:
+  lint:
     name: Lint, format, typecheck & test (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
 

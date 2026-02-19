@@ -28,6 +28,26 @@ Or from source:
 pip install -e path/to/twitter-oauth-pkce/
 ```
 
+## Examples
+
+A self-contained [FastAPI example](examples/fastapi_app.py) demonstrates the full flow end-to-end:
+
+```bash
+pip install fastapi "uvicorn[standard]" jinja2 python-multipart itsdangerous
+pip install -e .
+
+export TWITTER_CLIENT_ID="..."
+export TWITTER_CLIENT_SECRET="..."
+export TWITTER_REDIRECT_URI="http://localhost:8000/auth/callback"
+export STATE_SECRET="$(python -c 'import secrets; print(secrets.token_hex(32))')"
+
+uvicorn examples.fastapi_app:app --reload
+```
+
+Then open http://localhost:8000.
+
+---
+
 ## Quickstart
 
 ```python
