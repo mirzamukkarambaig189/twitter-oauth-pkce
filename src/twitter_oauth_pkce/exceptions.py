@@ -14,7 +14,15 @@ class OAuthStateExpiredError(OAuthError):
 
 
 class OAuthTokenExchangeError(OAuthError):
-    """Raised when the authorization code exchange with Twitter fails."""
+    """Raised when the authorization code or refresh token exchange with X fails."""
+
+
+class OAuthRevokeError(OAuthError):
+    """Raised when token revocation with X fails."""
+
+
+class OAuthAPIError(OAuthError):
+    """Raised when an X API call returns a non-200 response."""
 
 
 class OAuthMissingCredentialsError(OAuthError):
