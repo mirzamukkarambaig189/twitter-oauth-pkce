@@ -97,8 +97,8 @@ class TestDecodeState:
     def test_missing_uid_field_raises(self):
         sm = StateManager(SECRET)
         # Build a valid-signature state but without uid
-        import hmac as hmac_mod
         import hashlib
+        import hmac as hmac_mod
 
         payload = json.dumps({"ts": int(time.time()), "n": "abc"})
         sig = hmac_mod.new(SECRET.encode(), payload.encode(), hashlib.sha256).hexdigest()

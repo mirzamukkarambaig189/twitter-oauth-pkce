@@ -38,17 +38,17 @@ from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
 from twitter_oauth_pkce import (
-    TwitterOAuthService,
-    OAuthError,
-    OAuthStateExpiredError,
-    OAuthInvalidStateError,
-    OAuthTokenExchangeError,
-    OAuthRevokeError,
-    OAuthAPIError,
-    OAuthMissingCredentialsError,
+    SCOPE_OFFLINE_ACCESS,
     SCOPE_TWEET_READ,
     SCOPE_USERS_READ,
-    SCOPE_OFFLINE_ACCESS,
+    OAuthAPIError,
+    OAuthError,
+    OAuthInvalidStateError,
+    OAuthMissingCredentialsError,
+    OAuthRevokeError,
+    OAuthStateExpiredError,
+    OAuthTokenExchangeError,
+    TwitterOAuthService,
 )
 
 # ---------------------------------------------------------------------------

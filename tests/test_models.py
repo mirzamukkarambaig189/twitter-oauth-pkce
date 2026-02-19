@@ -1,6 +1,5 @@
 """Tests for OAuthTokens data model."""
 
-import pytest
 
 from twitter_oauth_pkce.models import OAuthTokens
 

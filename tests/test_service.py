@@ -6,16 +6,15 @@ from urllib.parse import parse_qs, urlparse
 
 import pytest
 
-from twitter_oauth_pkce.service import TwitterOAuthService
-from twitter_oauth_pkce.models import OAuthTokens
-from twitter_oauth_pkce.exceptions import (
-    OAuthMissingCredentialsError,
-    OAuthInvalidStateError,
-    OAuthTokenExchangeError,
-    OAuthRevokeError,
-    OAuthAPIError,
-)
 from twitter_oauth_pkce.constants import OAUTH_SCOPES, SCOPE_TWEET_WRITE
+from twitter_oauth_pkce.exceptions import (
+    OAuthAPIError,
+    OAuthInvalidStateError,
+    OAuthMissingCredentialsError,
+    OAuthRevokeError,
+    OAuthTokenExchangeError,
+)
+from twitter_oauth_pkce.service import TwitterOAuthService
 
 # ---------------------------------------------------------------------------
 # Fixtures

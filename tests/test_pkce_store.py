@@ -3,9 +3,6 @@
 import base64
 import hashlib
 import threading
-import time
-
-import pytest
 
 from twitter_oauth_pkce._internal.pkce_store import PKCEStore
 
